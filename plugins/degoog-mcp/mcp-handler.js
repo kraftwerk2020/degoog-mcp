@@ -44,7 +44,14 @@ export async function handleRequest(message, searchFn) {
             serverInfo: { name: "degoog-mcp", version: "0.1.0" },
           },
         };
-
+        
+      case "ping":
+        return {
+          jsonrpc: "2.0",
+          id,
+          result: {},
+        };
+        
       case "tools/list":
         return {
           jsonrpc: "2.0",
