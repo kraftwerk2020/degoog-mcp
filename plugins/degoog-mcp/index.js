@@ -4,7 +4,7 @@ import { handleRequest } from "./mcp-handler.js";
 import { readFile } from "fs/promises";
 import { join } from "path";
 
-const INTERNAL_PORT = process.env.DEGOOG_PORT || 4444;
+const INTERNAL_PORT = process.env.DEGOOG_SERVICE_PORT || process.env.DEGOOG_PORT || 4444;
 const DATA_DIR = join(process.cwd(), "data");
 const SETTINGS_FILE = join(DATA_DIR, "plugin-settings.json");
 
